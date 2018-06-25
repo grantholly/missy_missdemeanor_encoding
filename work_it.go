@@ -7,6 +7,12 @@ import(
 	"os"
 )
 
+func isItWorth (it bool) bool {
+	if it {
+		return true
+	}
+	return false
+}
 
 func flipIt (s string) string {
 	upsidedown := make(map[rune]string)
@@ -83,10 +89,9 @@ func main () {
 	// https://en.wikipedia.org/wiki/Work_It_(Missy_Elliott_song)
 	letsDoThis := args.String()
 
-	worthIt := true
+	it := true
 
-	if worthIt {
-		letMeWorkIt(letsDoThis);
+	if isItWorth(it) {
+		letMeWorkIt(letsDoThis)
 	}
-
 }
